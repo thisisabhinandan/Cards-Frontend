@@ -1,0 +1,11 @@
+<div class="card-container">
+  <h2>Fetch Card Details</h2>
+  <input type="text" placeholder="Enter Card Number" [(ngModel)]="fetchCardDTO.cardNumber">
+  <button (click)="fetchCard()">Fetch</button>
+
+  <div *ngIf="fetchCardDTO.cardType">
+    <p><strong>Card Type:</strong> {{ fetchCardDTO.cardType }}</p>
+    <p><strong>Balance:</strong> {{ fetchCardDTO.balance }}</p>
+    <p><strong>Available Amount:</strong> {{ fetchCardDTO.availableAmount }}</p>
+  </div>
+</div>
